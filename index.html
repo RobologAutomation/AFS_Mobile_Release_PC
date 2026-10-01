@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AFS Controller app</title>
+<style>
+  :root { --navy:#0B2A5B; --brand:#1E5BB8; --ink:#14233C; --muted:#6A778C; --page:#F4F6FA; --line:#E3E8F0; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--page); color: var(--ink); }
+  header { background: linear-gradient(135deg, var(--navy), var(--brand)); color:#fff; padding: 40px 16px 56px; text-align:center; }
+  header h1 { margin:0 0 6px; font-size: 26px; font-weight: 600; }
+  header p { margin:0; opacity:.85; }
+  main { max-width: 520px; margin: -32px auto 32px; padding: 0 16px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px; text-align:center; }
+  .btn { display:inline-block; background: var(--brand); color:#fff; text-decoration:none; font-weight:600;
+         padding: 14px 28px; border-radius: 12px; font-size: 17px; }
+  .ver { color: var(--muted); font-size: 14px; margin-top: 10px; min-height: 1em; }
+  ol { text-align:left; line-height:1.6; padding-left: 20px; margin: 20px 0 0; }
+  footer { text-align:center; color: var(--muted); font-size: 13px; padding-bottom: 24px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>AFS Controller</h1>
+  <p>Technician app for the AFS Controller (Android)</p>
+</header>
+<main>
+  <div class="card">
+    <a class="btn" href="AFS-Controller.apk" download>Download the app</a>
+    <div class="ver" id="ver"></div>
+    <ol>
+      <li>Tap <b>Download the app</b>. If the browser warns about the file, choose <b>Download anyway</b>.</li>
+      <li>Open the downloaded file. Allow the browser to install apps when Android asks, then tap <b>Install</b>.</li>
+      <li>Open AFS Controller and allow <b>Bluetooth</b> and <b>App Updates</b>. New versions then arrive in the app itself.</li>
+    </ol>
+  </div>
+</main>
+<footer>NeoSync Technologies</footer>
+<script>
+  fetch("beta/manifest.json", { cache: "no-store" }).then(r => r.json())
+    .then(m => { document.getElementById("ver").textContent = "Version " + m.version; }).catch(() => {});
+</script>
+</body>
+</html>
