@@ -1,10 +1,10 @@
 {
-    "version":  "0.12.4",
-    "versionCode":  33,
+    "version":  "0.12.5",
+    "versionCode":  34,
     "channel":  "beta",
-    "file":  "apk/AFS-Controller-0.12.4.apk",
-    "commit":  "2a81bddb0ee8ca71c8c2c41f954a00a23ae143ba",
-    "sha256":  "8cb753e45908c2da825b5ee85634f15c35c718058245994eab832f94d8dab1da",
+    "file":  "apk/AFS-Controller-0.12.5.apk",
+    "commit":  "e2d30622424c769d9db8a4dfa72121842d5d015c",
+    "sha256":  "d4146ef9244527a1766c82214b4a34dcea1fdcdfb6b6cd2f88392ced3190a857",
     "size":  1863391,
     "published":  "2026-10-01"
 }
